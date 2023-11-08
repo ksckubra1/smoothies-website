@@ -60,14 +60,17 @@ export default function SmoothiePage() {
   const [freeze, setFreeze] = useState(false)
   const imageRef = useRef(null);
 
+
+
   useEffect(() => {
+    let currentIndex = 0;
     const handleScroll = () => {
-      if (Number.isInteger(imageRef.current.scrollLeft / imageRef.current.offsetWidth)) {
-        console.log(imageRef.current.scrollLeft / imageRef.current.offsetWidth);
+      if (Number.isInteger(imageRef.current.scrollLeft / imageRef.current.offsetWidth) && (imageRef.current.scrollLeft / imageRef.current.offsetWidth) !== currentIndex) {
         setAnim(true)
         setFreeze(true)
         setTimeout(() => {
           setImageIndex(imageRef.current.scrollLeft / imageRef.current.offsetWidth);
+          currentIndex = imageRef.current.scrollLeft / imageRef.current.offsetWidth
           setAnim(false)
           setFreeze(false)
         }, 500);
