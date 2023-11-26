@@ -115,7 +115,7 @@ export default function SmoothiePage() {
       }}
     >
 
-      <div className="lg:w-[28%] break-word my-auto lg:h-full lg:ml-24 p-7 lg:p-0 flex flex-col">
+      <div className="lg:w-[28%] h-3/5 lg:h-full break-word my-auto lg:ml-24 p-7 lg:p-0 flex flex-col">
         <div className="hidden lg:pt-20 lg:flex justify-center  text-white/50 lg:text-xl xl:gap-32 gap-10">
           <span className="">MENU</span>
           <span>SMOOTHIES</span>
@@ -138,10 +138,10 @@ export default function SmoothiePage() {
 
         </div>
       </div>
-      <div ref={imageRef} className={`scrollTransparent lg:shadow-[#13121252] max-h-2/5 lg:h-full snap-mandatory snap-x shadow-xl overflow-hidden flex  items-center lg:w-[50%] bg-[#ffffff42] lg:rounded-l-full${freeze ? " overflow-x-hidden" : " overflow-x-auto"}`}>
+      <div ref={imageRef} className={`scrollTransparent h-2/5 lg:shadow-[#13121252] lg:h-full snap-mandatory snap-x shadow-xl overflow-hidden flex  items-center lg:w-[50%] bg-[#ffffff42] lg:rounded-l-full${freeze ? " overflow-x-hidden" : " overflow-x-auto"}`}>
         {
-          foods.map((food, index) => <div key={index} className="w-full snap-center snap-always	 flex shrink-0 justify-center items-center">
-            < img className={`sm:h-[550px] aspect-square p-20 lg:p-0 object-contain imageAnim`} src={food.banner} alt="" />
+          foods.map((food, index) => <div key={index} className="w-full snap-center snap-always	p-20 flex shrink-0 justify-center items-center">
+            < img className={`sm:h-[550px] aspect-square object-contain imageAnim`} src={food.banner} alt="" />
           </div>)
         }
       </div>
