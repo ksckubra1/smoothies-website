@@ -138,10 +138,10 @@ export default function SmoothiePage() {
 
         </div>
       </div>
-      <div ref={imageRef} className={`scrollTransparent lg:shadow-[#13121252] snap-mandatory snap-x shadow-xl overflow-hidden flex  items-center lg:w-[50%] bg-[#ffffff42] lg:rounded-l-full${freeze ? " overflow-x-hidden" : " overflow-x-auto"}`}>
+      <div ref={imageRef} className={`scrollTransparent lg:shadow-[#13121252] h-2/5 lg:h-full snap-mandatory snap-x shadow-xl overflow-hidden flex  items-center lg:w-[50%] bg-[#ffffff42] lg:rounded-l-full${freeze ? " overflow-x-hidden" : " overflow-x-auto"}`}>
         {
           foods.map((food, index) => <div key={index} className="w-full snap-center snap-always	 flex shrink-0 justify-center items-center">
-            < img className={`sm:h-[550px] aspect-square p-14 lg:p-0 object-contain imageAnim`} src={food.banner} alt="" />
+            < img className={`sm:h-[550px] aspect-square p-20 lg:p-0 object-contain imageAnim`} src={food.banner} alt="" />
           </div>)
         }
       </div>
